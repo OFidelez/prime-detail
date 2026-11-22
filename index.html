@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prime Detail — cuidado automotivo premium, detalhamento, polimento e proteção de pintura em Joinville.">
+<meta name="theme-color" content="#101010">
+<title>PRIME DETAIL | Estética Automotiva</title>
+<style>
+:root{--bg:#0b0b0b;--surface:#141414;--surface2:#1b1b1b;--gold:#c6a66a;--gold2:#e0c58c;--text:#f5f3ef;--muted:#a5a29d;--line:#2b2b2b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);border-bottom:1px solid #242424}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:1.15rem;font-weight:800;letter-spacing:.16em}
+.brand span{color:var(--gold)}
+nav{display:flex;gap:28px;align-items:center}
+nav a{font-size:.9rem;color:#d3d0ca;transition:.2s}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:3px;background:var(--gold);color:#111;font-weight:750;font-size:.9rem;letter-spacing:.02em;transition:.2s;border:1px solid var(--gold)}
+.btn:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--text);border-color:#555}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero{min-height:650px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(5,5,5,.94),rgba(5,5,5,.65) 52%,rgba(5,5,5,.25)),url('https://images.unsplash.com/photo-1492145532117-3b4b9b7e9c2f?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero-content{padding:100px 0;max-width:700px}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.22em;font-size:.75rem;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(2.7rem,7vw,5.6rem);line-height:1.04;letter-spacing:-.04em;margin-bottom:24px}
+h1 span{color:var(--gold)}
+.hero p{font-size:1.08rem;color:#c8c6c1;max-width:570px;margin-bottom:32px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin-top:58px;display:flex;gap:35px;flex-wrap:wrap;color:#c3c0bb;font-size:.84rem}
+.hero-note strong{display:block;color:white;font-size:1.1rem}
+section{padding:96px 0}
+.section-head{max-width:700px;margin-bottom:44px}
+.section-head h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;letter-spacing:-.03em;margin-bottom:14px}
+.section-head p{color:var(--muted)}
+.services{background:#101010}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{background:var(--surface);border:1px solid var(--line);padding:28px;min-height:230px;transition:.25s}
+.service:hover{border-color:#8e754a;transform:translateY(-4px)}
+.service .num{color:var(--gold);font-size:.8rem;letter-spacing:.15em;margin-bottom:22px}
+.service h3{font-size:1.25rem;margin-bottom:12px}
+.service p{color:var(--muted);font-size:.94rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-image{min-height:440px;background:url('https://images.unsplash.com/photo-1607860108855-64e5c7f8a5f7?auto=format&fit=crop&w=1200&q=85') center/cover;border-radius:4px}
+.about-copy p{color:var(--muted);margin:16px 0}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:26px}
+.feature{border-left:2px solid var(--gold);padding-left:13px;font-size:.92rem}
+.gallery{background:#101010}
+.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:230px 230px;gap:14px}
+.gallery-grid img{height:100%;width:100%;object-fit:cover;border-radius:3px;filter:saturate(.82)}
+.gallery-grid img:first-child{grid-row:span 2}
+.cta-band{background:linear-gradient(110deg,#171717,#242018);border:1px solid #383027;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.cta-band h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15}
+.cta-band p{color:var(--muted);margin-top:12px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact-info p{color:var(--muted);margin:12px 0}
+.contact-card{background:var(--surface);border:1px solid var(--line);padding:28px}
+.contact-card h3{margin-bottom:15px}
+.contact-item{padding:15px 0;border-bottom:1px solid var(--line)}
+.contact-item:last-child{border:0}
+.contact-item small{color:var(--gold);text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:5px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.85rem}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.disclaimer{margin-top:14px;font-size:.75rem;color:#777}
+.floating{position:fixed;bottom:20px;right:20px;z-index:20;box-shadow:0 6px 24px rgba(0,0,0,.4)}
+@media(max-width:800px){nav{gap:14px}nav a:not(.nav-cta){display:none}.hero{min-height:580px}.hero-content{padding:80px 0}.grid{grid-template-columns:1fr 1fr}.about,.contact{grid-template-columns:1fr}.about-image{min-height:340px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}.gallery-grid img:first-child{grid-row:auto}.cta-band{padding:32px;flex-direction:column;align-items:flex-start}}
+@media(max-width:520px){.nav{height:66px}.brand{font-size:1rem}.nav-cta{padding:10px 12px;font-size:.8rem}.hero{min-height:570px}h1{font-size:2.75rem}.hero-note{gap:20px}.grid{grid-template-columns:1fr}.service{min-height:auto}.gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,230px)}.features{grid-template-columns:1fr}section{padding:70px 0}.cta-band .btn{width:100%}.floating{right:12px;bottom:12px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a class="brand" href="#inicio">PRIME <span>DETAIL</span></a>
+  <nav><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a><a class="btn nav-cta" href="#contato">Solicitar orçamento</a></nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="inicio">
+ <div class="container hero-content">
+  <div class="eyebrow">Estética automotiva • Joinville</div>
+  <h1>Seu carro merece um cuidado <span>extraordinário.</span></h1>
+  <p>Detalhamento automotivo, proteção e acabamento de alto padrão. Cuidado minucioso para valorizar cada detalhe do seu veículo.</p>
+  <div class="actions"><a class="btn" href="#contato">Solicitar orçamento</a><a class="btn btn-outline" href="#servicos">Conheça os serviços</a></div>
+  <div class="hero-note"><div><strong>Precisão</strong> Atenção aos detalhes</div><div><strong>Proteção</strong> Cuidado de alto padrão</div><div><strong>Excelência</strong> Acabamento refinado</div></div>
+ </div>
+</section>
+<section class="services" id="servicos">
+ <div class="container">
+  <div class="section-head"><div class="eyebrow">O que fazemos</div><h2>Tratamentos que valorizam seu veículo.</h2><p>Conheça alguns dos serviços de cuidado e renovação automotiva.</p></div>
+  <div class="grid">
+   <article class="service"><div class="num">01 / CUIDADO</div><h3>Lavagem detalhada</h3><p>Limpeza cuidadosa de superfícies, cantos e detalhes, com atenção à conservação do veículo.</p></article>
+   <article class="service"><div class="num">02 / RENOVAÇÃO</div><h3>Polimento técnico</h3><p>Processo de refinamento da pintura para melhorar o aspecto visual e o brilho, conforme avaliação.</p></article>
+   <article class="service"><div class="num">03 / PROTEÇÃO</div><h3>Vitrificação</h3><p>Proteção de pintura com aplicação de revestimento apropriado e preparação técnica.</p></article>
+   <article class="service"><div class="num">04 / INTERIOR</div><h3>Higienização interna</h3><p>Limpeza de estofados, carpetes e superfícies internas, respeitando os materiais.</p></article>
+   <article class="service"><div class="num">05 / RESTAURAÇÃO</div><h3>Revitalização estética</h3><p>Cuidados para recuperar a apresentação de elementos internos e externos do veículo.</p></article>
+   <article class="service"><div class="num">06 / PERSONALIZADO</div><h3>Consultoria de cuidado</h3><p>Orientação sobre opções de tratamento e manutenção para as necessidades do seu automóvel.</p></article>
+  </div>
+ </div>
+</section>
+<section id="sobre">
+ <div class="container about">
+  <div class="about-image" role="img" aria-label="Veículo em processo de detalhamento"></div>
+  <div class="about-copy"><div class="eyebrow">Prime Detail</div><h2 style="font-size:clamp(2rem,4vw,3rem);line-height:1.15">Detalhes que fazem a diferença.</h2><p>Um cuidado automotivo que combina técnica, atenção e paixão por acabamento. Cada etapa é pensada para valorizar a aparência e a conservação do seu veículo.</p><p>Nosso compromisso é oferecer uma experiência cuidadosa, transparente e personalizada do primeiro contato à entrega.</p><div class="features"><div class="feature">Atendimento personalizado</div><div class="feature">Cuidado minucioso</div><div class="feature">Processos especializados</div><div class="feature">Qualidade no acabamento</div></div></div>
+ </div>
+</section>
+<section class="gallery" id="galeria">
+ <div class="container"><div class="section-head"><div class="eyebrow">Inspiração</div><h2>O cuidado está nos detalhes.</h2><p>Imagens ilustrativas para apresentar o estilo e os serviços da demonstração.</p></div>
+  <div class="gallery-grid">
+   <img src="https://images.unsplash.com/photo-1607860108855-64e5c7f8a5f7?auto=format&fit=crop&w=1200&q=85" alt="Detalhamento de automóvel" loading="lazy">
+   <img src="https://images.unsplash.com/photo-1607860108855-64e5c7f8a5f7?auto=format&fit=crop&w=900&q=85" alt="Acabamento automotivo" loading="lazy">
+   <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=85" alt="Automóvel esportivo" loading="lazy">
+   <img src="https://images.unsplash.com/photo-1492145532117-3b4b9b7e9c2f?auto=format&fit=crop&w=900&q=85" alt="Carro em ambiente automotivo" loading="lazy">
+   <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=85" alt="Veículo premium" loading="lazy">
+  </div>
+ </div>
+</section>
+<section>
+ <div class="container"><div class="cta-band"><div><div class="eyebrow">Agende seu cuidado</div><h2>Eleve o padrão de cuidado do seu veículo.</h2><p>Fale conosco e descubra o tratamento ideal para seu carro.</p></div><a class="btn" href="#contato">Fale conosco</a></div></div>
+</section>
+<section id="contato">
+ <div class="container contact">
+  <div class="contact-info"><div class="eyebrow">Contato</div><h2 style="font-size:clamp(2rem,4vw,3rem);line-height:1.15">Vamos cuidar do seu carro?</h2><p>Entre em contato para solicitar um orçamento ou tirar suas dúvidas sobre os serviços.</p><p style="color:var(--gold)">Esta página é uma demonstração de portfólio. Os dados abaixo são placeholders.</p></div>
+  <div class="contact-card"><h3>Informações</h3><div class="contact-item"><small>WhatsApp</small><span> (47) 99999-9999 — número demonstrativo</span></div><div class="contact-item"><small>Localização</small><span>Joinville • Santa Catarina</span></div><div class="contact-item"><small>Horário</small><span>Segunda a sábado • Horário demonstrativo</span></div><div style="margin-top:22px"><a class="btn" id="whatsapp" href="#" target="_blank" rel="noopener">Solicitar orçamento pelo WhatsApp</a></div></div>
+ </div>
+</section>
+</main>
+<footer><div class="container"><div class="footer-row"><div class="brand">PRIME <span>DETAIL</span></div><div>Estética automotiva • Joinville, SC</div><div>© <span id="year"></span> PRIME DETAIL</div></div><div class="disclaimer">Site demonstrativo criado para portfólio. Empresa, contato, horários e demais dados apresentados são fictícios; imagens ilustrativas.</div></div></footer>
+<a class="btn floating" href="#contato">Orçamento</a>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+// Placeholder intentionally does not initiate a conversation with an actual phone number.
+document.getElementById('whatsapp').addEventListener('click',function(e){e.preventDefault();alert('Site demonstrativo: substitua este número fictício pelo WhatsApp real do cliente antes da publicação.');});
+</script>
+</body>
+</html>
